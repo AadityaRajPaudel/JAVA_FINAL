@@ -1,0 +1,40 @@
+Socket Programming: communication between two or more applications running on separate JRE's is Socket Programming.
+
+1) Port:
+    Port number is a logical construct. It operates on Transport layer
+    It is used to uniquely identify a process for an application.
+    It is a 16-bit integer ranging from 0-65535
+
+    Port Number are divided into 3 types:
+        a)Well Known Ports: 1-1023. Eg: http(80), https(443)
+        b)Register Port: 1024-4951. Eg: mysql-3306
+        c)Dynamic Port: 4952-65535. Used for client applications.
+
+2) Socket:
+    It is the end point of communication. 
+    It creates a two way communication for data transfer.
+    Operates on Applicaton layer
+    Consists of ip address and port number.
+
+3)IP Address:
+    Represents address of computing device in a network.
+    There are 2 types of IP addresses: IPV4(32bit) & IPV6(128bit)
+
+4) URL:
+    Address of resource in a network
+
+5) Protocol: 
+    Set of rules for communication
+
+6) URL Class:
+    It is a part of java.net package used to process URL.
+
+    Methods
+    a)public String getProtocol(); // returns protocol specified in URL
+    URL_Processing.java
+
+7)URLConnection Class:
+    Used to read/write data into URL.
+
+8)INETAddress Class:
+    It is a class used to work with IP address. It has 2 sub-classes: INET4 and INET6 addresses which work with IPV4 and IPV6 respectively.

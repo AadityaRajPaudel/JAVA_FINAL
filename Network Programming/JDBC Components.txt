@@ -5,44 +5,29 @@ DriverManager, Connection, Statement, PreparedStatement, ResultSet, ResultSetMet
     It is a class of JAVA API under java.sql package. It is used to manage, register, de-register drivers. Provides interface between user and Drivers.
 
     a)public static Connection getConnection(String url, String uname, String pw) throws SQLException; // helps to connect to db using specified URL, uname and pw.
-
     b)public static Connection getConnection(String url) throws SQLException; //helps to connect to db using specified URL.
-
     c)public static synchronized void registerDriver(Driver d); // used to register the specified driver
-
     d)public static synchronized void deregisterDriver(Driver d); // to de-register the specified driver
-
-    e)public static int getLoginTimeout(); //returns time that driver is allowed to wait before connection with database.
-
-    f)public static int setLoginTimeout(int time); //sets time that driver is allowed to wait before connection with database. time=0- wait=1/0
+    
 
 2)Connection:
     It is an interface used to establish communication with Database.
-
     a)public Statement createStatement();// returns Statement object used to execute queries
-
     b)public PreparedStatement prepareStatement(String query); //returns PreparedStatement object
-
     c)public void close(); // closes the connection
 
 3)Statement:
     It is an interface used to execute queries.
 
     a)public ResultSet executeQuery(String query); //executes query and table is returned as ResultSet object
-
     b)public int executeUpdate(String query); // returns number of rows affected by executing INSERT, UPDATE, DELETE, etc.
-
-    c)public boolean execute(String query); // used to execute queries which may return multiple results
-
-    d)public int[] executeBatch(); //execute batch of queries
+    c)public int[] executeBatch(); //execute batch of queries
 
 4)PreparedStatement:
     It is the sub-interface of Statement used to execute dynamic queries.
 
     a)public void setInt(int index, int value); //used to insert given value at specified parameter index.
-
     b)public void setString(int index, String string); // same as above
-
     c)public void setFloat(int index, Float f); //same
 
 5)ResultSet:
@@ -63,8 +48,7 @@ DriverManager, Connection, Statement, PreparedStatement, ResultSet, ResultSetMet
     a)public String getTableName(); // returns table name
     b)public String getColumnName(int columnIndex); // returns name of column of specified index
     c)public int getCoulumnCount(); // returns number of columns in table
-    d)public String getColumnTypeName(int columnIndex); //returns datatype of column of specified index
-
+    
     eg: Statement stmt = cn.createStatement();
         ResultSet rs = stmt.executeQuery("Select * from Table");
         ResultSetMetaData meta = rs.getMetadata();
