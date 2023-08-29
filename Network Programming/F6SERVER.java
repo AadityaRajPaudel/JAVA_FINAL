@@ -5,14 +5,14 @@ import java.util.*;
 public class F6SERVER {
     public static void main(String [] args) throws Exception{
         
-        ServerSocket s = new ServerSocket(8000);
+        ServerSocket ss = new ServerSocket(8000);
          
-        Socket ss = s.accept();
+        Socket s = ss.accept();
 
     while (true) {
         
-        DataOutputStream dos = new DataOutputStream(ss.getOutputStream());
-        DataInputStream dis = new DataInputStream(ss.getInputStream());
+        DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+        DataInputStream dis = new DataInputStream(s.getInputStream());
         
         String incoming = dis.readUTF();
         System.out.println("Aryn: " + incoming);

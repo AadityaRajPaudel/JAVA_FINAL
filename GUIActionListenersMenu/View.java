@@ -22,10 +22,10 @@ public class View implements ActionListener{
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // EventHandler ev = new EventHandler(this);
-        // b.addActionListener(ev); these two lines are shown as error but must be written
+        EventHandler ev = new EventHandler(this);
+        b.addActionListener(ev); //these two lines are shown as error but must be written
     }
-    public void actionPerformed(ActionEvent e) {
+    public static void main(String[] args) {
         new View();
     }
 }
